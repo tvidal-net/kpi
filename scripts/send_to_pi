@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -eo pipefail
 
-MODULE=${1:-pwm}
+MODULE=${1:-gpio}
 SSH_HOST=${2:-zero.tvidal.uk}
 
 cd "$PWD/`dirname $0`/.."
 
-./gradlew :pwm:linkDebugExecutableArm \
+./gradlew :$MODULE:linkDebugExecutableArm \
     && scp -C "$PWD/$MODULE/build/bin/arm/debugExecutable/$MODULE.kexe" "pi@$SSH_HOST:~" \
     && ssh "pi@$SSH_HOST" 'sudo bash -' <<EOF
 
