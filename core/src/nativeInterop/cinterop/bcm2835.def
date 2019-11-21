@@ -1,0 +1,5 @@
+headers = bcm2835.h
+package = bcm2835
+staticLibraries = libbcm2835.a
+libraryPaths = core/lib
+compilerOpts.linux = -Iinclude

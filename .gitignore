@@ -1,0 +1,5 @@
+*.kexe
+*.klib
+*.log
+/.gradle
+build/

@@ -1,0 +1,14 @@
+kotlin {
+    linuxArm32Hfp('arm') {
+        binaries {
+            executable {
+                entryPoint 'uk.tvidal.kpi.pwm.main'
+            }
+        }
+    }
+}
+
+dependencies {
+    armImplementation project(':ansi')
+    armImplementation project(':core')
+}

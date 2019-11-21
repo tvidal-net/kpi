@@ -1,0 +1,5 @@
+rootProject.name = 'kpi'
+
+include ':ansi'
+include ':core'
+include ':pwm'
