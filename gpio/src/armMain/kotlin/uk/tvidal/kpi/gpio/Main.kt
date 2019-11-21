@@ -1,7 +1,5 @@
 package uk.tvidal.kpi.gpio
 
-import bcm2835.BCM2835_GPIO_FSEL_INPT
-import bcm2835.BCM2835_GPIO_FSEL_OUTP
 import uk.tvidal.kpi.bcm2835.GPIO
 import uk.tvidal.kpi.getOrDefault
 import uk.tvidal.kpi.u
@@ -32,8 +30,8 @@ fun main(args: Array<String>) {
     if (args.isEmpty()) printHelp() else when (args.cmd) {
         "on" -> GPIO.on(args.pin)
         "off" -> GPIO.off(args.pin)
-        "in" -> GPIO.mode(args.pin, BCM2835_GPIO_FSEL_INPT)
-        "out" -> GPIO.mode(args.pin, BCM2835_GPIO_FSEL_OUTP)
+        "in" -> GPIO.input(args.pin)
+        "out" -> GPIO.output(args.pin)
         "read" -> println(if (GPIO[args.pin]) "HIGH" else "LOW")
         "toggle" -> args.pin.let {
             if (GPIO[it]) GPIO.off(it)

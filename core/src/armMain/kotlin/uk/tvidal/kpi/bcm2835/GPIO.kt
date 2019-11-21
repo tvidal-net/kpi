@@ -1,5 +1,7 @@
 package uk.tvidal.kpi.bcm2835
 
+import bcm2835.BCM2835_GPIO_FSEL_INPT
+import bcm2835.BCM2835_GPIO_FSEL_OUTP
 import bcm2835.RPiGPIOPin
 import bcm2835.bcm2835FunctionSelect
 import bcm2835.bcm2835_gpio_clr
@@ -17,6 +19,10 @@ object GPIO : PiService() {
         pin = pin.toUByte(),
         mode = mode.toUByte()
     )
+
+    fun input(pin: RPiGPIOPin) = mode(pin, BCM2835_GPIO_FSEL_INPT)
+
+    fun output(pin: RPiGPIOPin) = mode(pin, BCM2835_GPIO_FSEL_OUTP)
 
     fun on(pin: RPiGPIOPin) = bcm2835_gpio_set(
         pin = pin.toUByte()
