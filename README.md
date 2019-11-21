@@ -33,6 +33,15 @@ the executable is uploaded to the raspberry pi.
 - [SPI](#SPI)
 - [I2C](#I2C)
 
+### GPIO
+
+Example:
+- [Main.kt](gpio/src/armMain/kotlin/uk/tvidal/kpi/gpio/Main.kt)
+
+```bash
+bash -x scripts/send_to_pi 'gpio' '192.168.0.xxx'
+```
+
 ### PWM
 
 - [Main.kt](pwm/src/armMain/kotlin/uk/tvidal/kpi/pwm/Main.kt)
