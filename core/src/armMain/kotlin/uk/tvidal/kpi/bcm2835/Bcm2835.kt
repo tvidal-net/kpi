@@ -6,21 +6,6 @@ import kotlin.time.Duration
 import kotlin.time.ExperimentalTime
 
 @ExperimentalUnsignedTypes
-const val ON: UByte = 1u
-
-@ExperimentalUnsignedTypes
-const val OFF: UByte = 0u
-
-@ExperimentalUnsignedTypes
-fun u(it: Int): UInt = it.toUInt()
-
-@ExperimentalUnsignedTypes
-fun u(it: Byte): UByte = it.toUByte()
-
-@ExperimentalUnsignedTypes
-fun u(it: Boolean): UByte = if (it) ON else OFF
-
-@ExperimentalUnsignedTypes
 fun delay(millis: Int) = bcm2835_delay(millis.toUInt())
 
 @ExperimentalUnsignedTypes

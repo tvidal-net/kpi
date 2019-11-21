@@ -9,7 +9,7 @@ ago, looking for a kotlin native lib for the raspberry-pi.
 As of now, this library is just a wrapper around the C Library
 for the Broadcom
 [BCM 2835](https://www.airspayce.com/mikem/bcm2835/index.html),
-created by [Mike McCauley](mikem@airspayce.com).
+created by [Mike McCauley](mailto:mikem@airspayce.com).
 
 Is has been tested on a raspberry-pi zero.
 

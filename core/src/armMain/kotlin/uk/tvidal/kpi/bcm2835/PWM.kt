@@ -7,6 +7,7 @@ import bcm2835.bcm2835_pwm_set_clock
 import bcm2835.bcm2835_pwm_set_data
 import bcm2835.bcm2835_pwm_set_mode
 import bcm2835.bcm2835_pwm_set_range
+import uk.tvidal.kpi.u
 
 @ExperimentalUnsignedTypes
 object PWM : PiService() {

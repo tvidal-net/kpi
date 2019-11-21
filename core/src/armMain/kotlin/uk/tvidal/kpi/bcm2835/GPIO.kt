@@ -7,6 +7,8 @@ import bcm2835.bcm2835_gpio_fsel
 import bcm2835.bcm2835_gpio_lev
 import bcm2835.bcm2835_gpio_set
 import bcm2835.bcm2835_gpio_write
+import uk.tvidal.kpi.OFF
+import uk.tvidal.kpi.u
 
 @ExperimentalUnsignedTypes
 object GPIO : PiService() {
