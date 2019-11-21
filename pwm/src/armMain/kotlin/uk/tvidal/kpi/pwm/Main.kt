@@ -8,6 +8,7 @@ import uk.tvidal.kpi.ansi.AnsiMove.column
 import uk.tvidal.kpi.bcm2835.PWM
 import uk.tvidal.kpi.bcm2835.PWM.PWM_RANGE
 import uk.tvidal.kpi.bcm2835.delay
+import uk.tvidal.kpi.getOrDefault
 import kotlin.time.ExperimentalTime
 
 @ExperimentalUnsignedTypes
@@ -20,10 +21,6 @@ private fun pwm(i: Int) {
     column(8)
     PWM(i)
 }
-
-private fun Array<String>.getOrDefault(i: Int, default: Int) =
-    if (size <= i) default
-    else get(i).toInt()
 
 @ExperimentalTime
 @ExperimentalUnsignedTypes
