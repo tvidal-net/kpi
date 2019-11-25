@@ -4,6 +4,24 @@ plugins {
 
 subprojects {
     apply plugin: 'org.jetbrains.kotlin.multiplatform'
+
+    kotlin {
+        sourceSets {
+            commonMain {
+                dependencies {
+                    implementation kotlin('stdlib-common')
+                }
+            }
+        }
+    }
+
+    kotlin.sourceSets.all {
+        languageSettings {
+            progressiveMode = true
+            useExperimentalAnnotation('kotlin.time.ExperimentalTime')
+            useExperimentalAnnotation('kotlin.ExperimentalUnsignedTypes')
+        }
+    }
 }
 
 allprojects {

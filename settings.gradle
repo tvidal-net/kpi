@@ -2,5 +2,4 @@ rootProject.name = 'kpi'
 
 include ':ansi'
 include ':core'
-include ':gpio'
-include ':pwm'
+include ':zero'

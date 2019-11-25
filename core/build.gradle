@@ -1,7 +1,9 @@
 kotlin {
-    linuxArm32Hfp('arm') {
-        compilations.main {
-            cinterops { bcm2835 }
+    linuxArm32Hfp('zero') {
+        binaries {
+            executable("gpio") {
+                entryPoint 'uk.tvidal.kpi.gpio.main'
+            }
         }
     }
 }

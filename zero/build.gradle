@@ -1,0 +1,7 @@
+kotlin {
+    linuxArm32Hfp('arm') {
+        compilations.main {
+            cinterops { bcm2835 }
+        }
+    }
+}
