@@ -1,0 +1,3 @@
+kotlin {
+    linuxArm32Hfp('arm')
+}

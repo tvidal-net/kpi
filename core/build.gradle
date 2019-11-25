@@ -7,3 +7,7 @@ kotlin {
         }
     }
 }
+
+dependencies {
+    zeroImplementation project(':zero')
+}

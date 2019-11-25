@@ -1,8 +1,8 @@
 package uk.tvidal.kpi.gpio
 
+import uk.tvidal.kpi.GpioPin.P18
 import uk.tvidal.kpi.Pi
-import uk.tvidal.kpi.Pin
 
 fun main() {
-    Pi.on(Pin.P0)
+    Pi.toggle(P18)
 }

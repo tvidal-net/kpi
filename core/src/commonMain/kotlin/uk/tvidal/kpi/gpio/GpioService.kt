@@ -1,8 +1,8 @@
 package uk.tvidal.kpi.gpio
 
-import uk.tvidal.kpi.Pin
+import uk.tvidal.kpi.GpioPin
 
 interface GpioService {
-    fun on(pin: Pin)
-    fun off(pin: Pin)
+    fun on(pin: GpioPin)
+    fun off(pin: GpioPin)
 }

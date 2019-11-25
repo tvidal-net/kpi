@@ -3,9 +3,10 @@ package uk.tvidal.kpi.ansi
 const val ESC = 0x1B.toChar()
 const val SGR0 = "$ESC[m"
 
-// TODO: find a way to determine if current console has ansi support
+internal expect fun checkAnsiSupport(): Boolean
+
 val hasAnsiSupport: Boolean
-    get() = true
+    get() = checkAnsiSupport()
 
 inline fun withAnsi(
     default: String = "",
