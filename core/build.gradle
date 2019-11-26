@@ -1,13 +1,12 @@
 kotlin {
     linuxArm32Hfp('zero') {
+        compilations.main {
+            cinterops { bcm2835 }
+        }
         binaries {
-            executable("gpio") {
+            executable('gpio') {
                 entryPoint 'uk.tvidal.kpi.gpio.main'
             }
         }
     }
-}
-
-dependencies {
-    zeroImplementation project(':zero')
 }
