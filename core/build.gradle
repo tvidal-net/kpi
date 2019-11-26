@@ -12,4 +12,18 @@ kotlin {
             }
         }
     }
+
+    linuxArm32Hfp('wiring') {
+        compilations.main {
+            cinterops { wiringpi }
+        }
+        binaries {
+            executable('gpio') {
+                entryPoint 'uk.tvidal.kpi.gpio.main'
+            }
+            executable('pwm') {
+                entryPoint 'uk.tvidal.kpi.pwm.main'
+            }
+        }
+    }
 }
