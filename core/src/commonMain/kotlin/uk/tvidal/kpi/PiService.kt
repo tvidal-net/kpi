@@ -3,8 +3,11 @@ package uk.tvidal.kpi
 import uk.tvidal.kpi.gpio.GpioMode
 import uk.tvidal.kpi.gpio.GpioValue
 import uk.tvidal.kpi.gpio.GpioValue.OFF
+import uk.tvidal.kpi.pwm.PwmService
 
 interface PiService {
+
+    val pwm: PwmService
 
     fun on(pin: GpioPin)
     fun off(pin: GpioPin)

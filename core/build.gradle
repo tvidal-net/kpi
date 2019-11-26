@@ -7,6 +7,9 @@ kotlin {
             executable('gpio') {
                 entryPoint 'uk.tvidal.kpi.gpio.main'
             }
+            executable('pwm') {
+                entryPoint 'uk.tvidal.kpi.pwm.main'
+            }
         }
     }
 }

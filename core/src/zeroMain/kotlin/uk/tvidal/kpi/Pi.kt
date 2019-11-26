@@ -6,6 +6,7 @@ import uk.tvidal.kpi.gpio.GpioMode
 import uk.tvidal.kpi.gpio.GpioValue
 import uk.tvidal.kpi.gpio.GpioValue.ON
 import uk.tvidal.kpi.gpio.GpioValue.TOGGLE
+import uk.tvidal.kpi.pwm.PwmService
 
 actual object Pi : PiService {
 
@@ -15,6 +16,9 @@ actual object Pi : PiService {
             exit(127)
         }
     }
+
+    override val pwm: PwmService
+        get() = PWM
 
     override fun on(pin: GpioPin) = pin.on()
 
