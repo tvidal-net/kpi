@@ -14,7 +14,7 @@ actual object Pi : PiService {
     }
 
     override val pwm: PwmService
-        get() = TODO("not implemented")
+        get() = PWM
 
     override fun on(pin: GpioPin) = pin.on()
 
