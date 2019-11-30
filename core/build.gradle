@@ -27,3 +27,12 @@ kotlin {
         }
     }
 }
+
+task uploadToPi(type: Exec) {
+    inputs.dir file("$buildDir/bin/zero")
+    ignoreExitValue true
+    workingDir "$buildDir/bin"
+    executable 'sh'
+    args '-c', "rsync -qrl zero/*DebugExecutable/*.kexe 'pi@$pi_host:~'"
+}
+build.dependsOn uploadToPi
