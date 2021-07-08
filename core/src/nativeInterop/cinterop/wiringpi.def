@@ -1,5 +1,5 @@
 headers = wiringPi.h wiringPiI2C.h wiringPiSPI.h
 package = wiringpi
 staticLibraries = libwiringPi.a
-libraryPaths = core/lib
+libraryPaths = lib
 compilerOpts.linux = -Iinclude
